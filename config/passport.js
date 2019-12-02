@@ -9,7 +9,7 @@ passport.use(new GoogleStrategy({
 },
 
   function (accessToken, refreshToken, profile, cb) {
-    User.findOne({ 'googleId': profile.id }, function (err, user) {
+    User.findOne({googleId: profile.id }, function (err, user) {
       if (err) return cb(err);
       if (user) {
         return cb(null, user);
@@ -29,12 +29,12 @@ passport.use(new GoogleStrategy({
   }
 ));
 
-passport.serializeUser(function (user, done) {
+passport.serializeUser(function(user, done) {
   done(null, user.id);
 });
 
-passport.deserializeUser(function (id, done) {
-  User.findById(id, function (err, user) {
+passport.deserializeUser(function(id, done) {
+  User.findById(id, function(err, user) {
     done(err, user);
   });
 });
