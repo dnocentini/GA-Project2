@@ -7,7 +7,12 @@ module.exports = {
   getAll,
   getOne,
   create,
-  deleteOne
+  deleteOne,
+  update
+};
+
+function update(id, todo) {
+  todos.splice(id, 1, todo);
 };
 
 function deleteOne(id) {
