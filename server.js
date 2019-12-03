@@ -17,7 +17,7 @@ require('./config/passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var todosRouter = require('./routes/todos');
-
+var itemsRouter = require('./routes/items');
 
 
 // view engine setup
@@ -41,6 +41,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/todos', todosRouter);
+app.use('/items', itemsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
