@@ -2,7 +2,13 @@ const Todo = require('../models/todo');
 
 module.exports = {
   index,
-  create
+  create,
+  delete: deleteTodo
+};
+
+function deleteTodo(req, res) {
+  Todo.deleteOne(req.params.id);
+  res.redirect('/todos');
 };
 
 function create(req, res) {

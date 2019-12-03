@@ -13,8 +13,12 @@
   <a href="/">Home Page</a>
   <h1>Today <%= time %></h1>
   <ul>
+
     <% todos.forEach(function(t, idx) { %>
     <li>
+      <form action="/todos/<%= idx %>?_method=DELETE" class="delete-form" method="POST">
+        <button type="submit">X</button>
+      </form>
       <a href="/todos/<%= idx %>"> <%= t.todo %></a>
     </li>
     <% }); %>
