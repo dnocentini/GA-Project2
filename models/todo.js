@@ -4,9 +4,14 @@ const todos = [
 ];
 
 module.exports = {
-  getAll
-}
+  getAll,
+  create
+};
+
+function create(todo) {
+  todos.push(todo);
+};
 
 function getAll() {
   return todos;
-}
+};

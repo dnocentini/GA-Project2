@@ -1,7 +1,14 @@
 const Todo = require('../models/todo');
 
 module.exports = {
-  index
+  index,
+  create
+};
+
+function create(req, res) {
+  req.body.done = false;
+  Todo.create(req.body);
+  res.redirect('/todos');
 };
 
 function index(req, res) {
@@ -10,3 +17,4 @@ function index(req, res) {
     time: req.time
   });
 };
+
