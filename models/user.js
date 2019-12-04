@@ -1,27 +1,34 @@
 const Mongoose = require('mongoose')
 const Schema = Mongoose.Schema
 
-const taskSchema = new Schema({
-    text: String
+const todoSchema = new Schema({
+  content: {
+    type: String,
+    // required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
+  }
 }, {
-    timestamps: true
+  timestamps: true
 });
 
-const itemSchema = new Schema({
-    text: String
+const shopSchema = new Schema({
+  type: String,
 }, {
-    timestamps: true
+  timestamps: true
 });
 
 
 const userSchema = new Schema({
-    UserName: String,
-    UserId: Number,
-    tasks: [taskSchema],
-    items: [itemSchema],
-    googleId: String,
+  name: String,
+  email: String,
+  googleId: String,
+  todos: [todoSchema],
+  shops: [shopSchema],
 }, {
-    timestamps: true
+  timestamps: true
 });
-  
-  module.exports = Mongoose.model('user', userSchema);
+
+module.exports = Mongoose.model('user', userSchema);
