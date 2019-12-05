@@ -66,6 +66,33 @@ li {
     "sidebar";
 }
 
+.bkgImg {
+  min-height: 100%;
+  min-width: 1024px;
+	
+  width: 100%;
+  height: auto;
+	
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+  filter: blur(5px);
+}
+
+.nav-wrapper {
+  background-color: #E83F6F;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.brand-logo {
+  margin-left: 15px;
+  font-family: 'Satisfy', cursive;
+}
+
+
 @media (min-width: 500px) {
   .wrapper {
     grid-template-columns: 1fr 3fr;
