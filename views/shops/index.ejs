@@ -1,0 +1,26 @@
+<%-include('../partials/header') %>
+
+<article class="content">
+  <ul>
+    <% user.shops.forEach(function(shop) { %>
+    <li>
+      <form action="/shops/<%= shop._id %>?_method=DELETE" class="delete-form" class="btn-done" method="POST">
+        <button type="submit">Done</button>
+      </form>
+      <a href="/shops/<%=  shop._id %>/edit" class="show"> <%= shop.content %></a>
+    </li>
+    <% }); %>
+  </ul>
+  <form action="/shops" class="input-add" method="POST" autocomplete="off">
+    <input placeholder="Add new item" type="text" name="content">
+    <button class="btn waves-effect waves-light" type="submit" name="action"> Add Item
+      <i class="material-icons right">create</i>
+    </button>
+  </form>
+</article>
+<aside class="side">
+  <div>TODAY</div>
+  <div>WEEK</div>
+  <div>YEAR</div>
+</aside>
+<%- include('../partials/footer') %>

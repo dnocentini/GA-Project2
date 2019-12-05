@@ -15,7 +15,9 @@ const todoSchema = new Schema({
 });
 
 const shopSchema = new Schema({
-  type: String,
+  content: {
+    type: String
+  }
 }, {
   timestamps: true
 });

@@ -98,21 +98,45 @@ li {
   justify-content: center;
 }
 
-.card {
+.w-card {
   justify-content: center;
   width: auto;
   padding: 20px 50px 20px 50px;
   margin-top: 180px;
 }
 
-.card-title {
+.w-title {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 52px !important;
 }
 
-.card-content {
+.w-content {
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 22px;
+}
+
+.nav-card {
+  display: flex;
+  justify-content: center;
+}
+
+.n-card {
+  width: auto;
+  height: 30px;
+  margin: 0px 10px 0px 10px;
+}
+
+.n-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.n-divider{
+  position:absolute;
+  left:50%;
+  top:10%;
+  bottom:10%;
+  border-left:1px solid black;
 }
 
 @media (min-width: 500px) {
@@ -122,14 +146,6 @@ li {
       "header  header  header"
       "nav     nav     nav"
       "sidebar content content";
-  }
-  .links {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .links > a{
-    margin-right: 20px;
   }
 }
 
@@ -142,12 +158,4 @@ li {
       "nav     nav     nav"
       "sidebar content content";
    }
-   .links {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .links > a{
-    margin-right: 20px;
-  }
 }
