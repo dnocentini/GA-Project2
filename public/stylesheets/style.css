@@ -89,9 +89,31 @@ li {
 
 .brand-logo {
   margin-left: 15px;
+  font-size: 40px !important;
   font-family: 'Satisfy', cursive;
 }
 
+.welcome-card {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  justify-content: center;
+  width: auto;
+  padding: 20px 50px 20px 50px;
+  margin-top: 180px;
+}
+
+.card-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 52px !important;
+}
+
+.card-content {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 22px;
+}
 
 @media (min-width: 500px) {
   .wrapper {
