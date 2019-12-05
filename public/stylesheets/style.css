@@ -1,10 +1,13 @@
-.brand-logo {
-  margin-left: 15px;
+/* body {
+  display: grid;
+  grid-template-columns: 1fr, 2fr, 3fr, 2fr, 1fr;
+  grid-template-rows: 2fr, 3fr, 4fr, 4fr, 4fr, 1fr, 3fr, 1fr;
 }
 
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+.brand-logo {
+  grid-column: 1/5;
+  grid-row: 1/2;
+  margin-left: 15px;
 }
 
 a {
@@ -22,4 +25,80 @@ a {
 
 li {
   list-style: none;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+.links > a{
+  margin-right: 10px;
+} */
+
+
+
+
+.main-head {
+  grid-area: header;
+}
+.content {
+  grid-area: content;
+}
+.main-nav {
+  grid-area: nav;
+}
+.side {
+  grid-area: sidebar;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 0px;
+  grid-template-areas: 
+    "header"
+    "nav"
+    "content"
+    "sidebar";
+}
+
+@media (min-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: 
+      "header  header  header"
+      "nav     nav     nav"
+      "sidebar content content";
+  }
+  .links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .links > a{
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: .5fr .5fr 4fr;
+    grid-template-areas: 
+      "header  header  header"
+      "nav     nav     nav"
+      "sidebar content content";
+   }
+   .links {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .links > a{
+    margin-right: 20px;
+  }
 }
