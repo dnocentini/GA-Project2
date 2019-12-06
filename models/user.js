@@ -7,8 +7,10 @@ const todoSchema = new Schema({
     // required: true
   },
   date: {
-    type: Date,
-    default: Date.now
+    type: String,
+    required: true,
+    enum: ['TODAY', 'WEEK', 'YEAR'],
+    default: 'YEAR'
   }
 }, {
   timestamps: true
@@ -17,6 +19,12 @@ const todoSchema = new Schema({
 const shopSchema = new Schema({
   content: {
     type: String
+  },
+  store: {
+    type: String,
+    required: true,
+    enum: ['HEB', 'WALMART', 'COSTCO'],
+    default: 'HEB'
   }
 }, {
   timestamps: true
@@ -27,7 +35,9 @@ const userSchema = new Schema({
   name: String,
   email: String,
   googleId: String,
-  todos: [todoSchema],
+  ttodos: [todoSchema],
+  wtodos: [todoSchema],
+  ytodos: [todoSchema],
   shops: [shopSchema],
 }, {
   timestamps: true

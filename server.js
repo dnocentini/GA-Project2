@@ -16,7 +16,9 @@ require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var todosRouter = require('./routes/todos');
+var ttodosRouter = require('./routes/ttodos');
+var wtodosRouter = require('./routes/wtodos');
+var ytodosRouter = require('./routes/ytodos');
 var shopsRouter = require('./routes/shops');
 
 
@@ -40,7 +42,9 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/', usersRouter);
-app.use('/todos', todosRouter);
+app.use('/ttodos', ttodosRouter);
+app.use('/wtodos', wtodosRouter);
+app.use('/ytodos', ytodosRouter);
 app.use('/shops', shopsRouter);
 
 // catch 404 and forward to error handler
