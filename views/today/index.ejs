@@ -20,14 +20,22 @@
 
         <div class="col s9 today-list">
           <div class="today-list-content">
-            <ul> 
+            <ul>
               <% user.today.forEach(function(ttodo) { %>
               <li>
-                <form action="/today/<%= ttodo._id %>?_method=DELETE" class="delete-form" class="btn-done"
-                  method="POST">
-                  <button type="submit">X</button>
+                <label>
+                  <form action="/today/<%= ttodo._id %>?_method=DELETE" class="delete-form" class="btn-done"
+                    method="POST">
+                    <input type="checkbox" class="filled-in">
+                    <span>
+                      <%= ttodo.content %>
+                      <button type="submit" class="btn-floating btn-tiny waves-effect waves-light today-delete">
+                        <i class="material-icons today-delete-icon valign-wrapper">close</i>
+                      </button>
+                    </span>
+
+                </label>
                 </form>
-                <a href="/today/<%=  ttodo._id %>/edit" class="show"> <%= ttodo.content %></a>
               </li>
               <div class="divider"></div>
               <% }); %>

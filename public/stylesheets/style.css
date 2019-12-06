@@ -195,9 +195,22 @@ main {
   max-height: 80% !important;
 }
 
+.today-delete {
+  justify-self: right;
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+  background-color: #E83F6F !important;
+}
+
+.today-delete-icon {
+  height: inherit;
+  font-size: 1rem !important;
+}
+
 li {
   display: flex;
   margin: 3px 0;
+  min-width: 100%;
 }
 
 @media (min-width: 500px) {
