@@ -141,6 +141,21 @@ main {
   border-left:1px solid black;
 }
 
+.t-content {
+  height: 100%;
+}
+
+.today-content {
+  height: 100%;
+}
+
+.today-btns {
+  height: 100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
+}
+
 .todo-card {
   display: flex;
   justify-content: center;
@@ -151,19 +166,38 @@ main {
   width: 550px;
   height: 550px;
   margin: 0px 10px 0px 10px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-around;
 }
 
 .todo-btn {
-  width: 50px !important;
-  height: 50px !important;
+  width: 100px !important;
+  height: 100px !important;
+  line-height: 100px !important;
+  text-align: center;
 }
 
 .t-divider{
   position:absolute;
-  left:30%;
-  top:10%;
-  bottom:10%;
-  border-left:3px solid black;
+  left:26%;
+  top:5%;
+  bottom:5%;
+  border-left:1px solid #2274A5
+}
+
+.today-list {
+  height: 100% !important;
+}
+
+.today-list-content {
+  min-height: 80% !important;
+  max-height: 80% !important;
+}
+
+li {
+  display: flex;
+  margin: 3px 0;
 }
 
 @media (min-width: 500px) {
