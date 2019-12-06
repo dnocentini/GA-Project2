@@ -9,10 +9,10 @@ module.exports = {
 
 function deleteTodo(req, res) {
   User.findById(req.user).exec(function (err, user) {
-    req.user.ytodos.id(req.params.id).remove();
+    req.user.year.id(req.params.id).remove();
     req.user.save(function (err) {
       if (err) return next(err);
-      res.redirect('/ytodos');
+      res.redirect('/year');
     });
   });
 };
@@ -22,10 +22,10 @@ function create(req, res, next) {
     if (req.body[key] === '') delete req.body[key];
   }
   User.findById(req.user).exec(function (err, user) {
-    req.user.ytodos.push(req.body)
+    req.user.year.push(req.body)
     req.user.save(function (err) {
       if (err) return next(err);
-      res.redirect('ytodos/');
+      res.redirect('year/');
     });
   });
 };
@@ -34,6 +34,6 @@ function create(req, res, next) {
 function index(req, res) {
   User.findById(req.user).exec(function (err, user) {
     if (err) return next(err);    
-    res.render('ytodos/index', { user });
+    res.render('year/index', { user });
   });
 };

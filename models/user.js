@@ -35,9 +35,9 @@ const userSchema = new Schema({
   name: String,
   email: String,
   googleId: String,
-  ttodos: [todoSchema],
-  wtodos: [todoSchema],
-  ytodos: [todoSchema],
+  today: [todoSchema],
+  week: [todoSchema],
+  year: [todoSchema],
   shops: [shopSchema],
 }, {
   timestamps: true
