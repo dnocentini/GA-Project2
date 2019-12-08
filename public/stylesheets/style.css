@@ -45,6 +45,12 @@ body {
   background-size: cover;
   
 }
+
+.links {
+  display: flex;
+  justify-content: center;
+}
+
 main {
   backdrop-filter: blur(2px);
 }
@@ -196,21 +202,33 @@ main {
 }
 
 .today-delete {
-  justify-self: right;
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-  background-color: #E83F6F !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
 }
 
 .today-delete-icon {
+  display: flex;
+  justify-content: flex-end;
   height: inherit;
   font-size: 1rem !important;
+  color: #E83F6F !important;
+  font-weight: bold !important;
 }
 
 li {
   display: flex;
-  margin: 3px 0;
   min-width: 100%;
+  font-weight: bold !important;
+}
+
+label {
+  min-width: inherit;
+}
+
+.today-text {
+  padding-left: 30px !important;
+  display: inline !important;
 }
 
 @media (min-width: 500px) {
@@ -227,7 +245,7 @@ li {
 @media (min-width: 700px) {
   .wrapper {
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: .5fr .5fr 4fr;
+    grid-template-rows: .5fr .2fr 4fr;
     grid-template-areas: 
       "header  header  header"
       "nav     nav     nav"

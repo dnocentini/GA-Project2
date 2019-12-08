@@ -19,34 +19,27 @@
 
 <body>
   <main>
-  <div class="wrapper">
-    <header class="main-head">
-      <div class="navbar-fixed">
-        <nav>
-          <div class="nav-wrapper">
-            <a href="" class="brand-logo left">Listy</a>
-            <ul class="right">
-              <li>
-                <% if (user) { %>
-                <a href="/logout"><i class="material-icons left">account_circle</i>Log Out</a>
-                <% } else { %>
-                <a href="/auth/google"><i class="material-icons left">vpn_key</i>Log in</a>
-                <% } %>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </header>
-
-    <div class="nav-card main-nav">
-      <div class="card horizontal n-card">
-        <div class="card-content n-content">
-          <div class="links">
-            <a href="/todos">To Do</a>
-            <div class="n-divider"></div>
-            <a href="/shops">Shopping</a>
-          </div>
+    <div class="wrapper">
+      <header class="main-head">
+        <div class="navbar-fixed">
+          <nav>
+            <div class="nav-wrapper">
+              <a href="" class="brand-logo left">Listy</a>
+              <ul class="right">
+                <li>
+                  <% if (user) { %>
+                  <a href="/logout"><i class="material-icons left">account_circle</i>Log Out</a>
+                  <% } else { %>
+                  <a href="/auth/google"><i class="material-icons left">vpn_key</i>Log in</a>
+                  <% } %>
+                </li>
+              </ul>
+            </div>
+          </nav>
         </div>
+      </header>
+
+      <div class="links main-nav">
+        <a href="/today" class="waves-effect waves-light btn">TO DO</a>
+        <a href="/shops" class="waves-effect waves-light btn">SHOPPING</a>
       </div>
-    </div>
