@@ -216,6 +216,12 @@ main {
   font-weight: bold !important;
 }
 
+ul {
+  height:27rem;
+  overflow:hidden; 
+  overflow-y:scroll;
+}
+
 li {
   display: flex;
   min-width: 100%;
@@ -229,6 +235,23 @@ label {
 .today-text {
   padding-left: 30px !important;
   display: inline !important;
+}
+
+tbody {
+  display:block;
+  height:150px;
+  overflow:auto;
+}
+thead, tbody tr {
+  display:table;
+  width:100%;
+  table-layout:fixed;
+}
+thead {
+  width: calc( 100% - 1em )
+}
+table {
+  width:100%;
 }
 
 @media (min-width: 500px) {
