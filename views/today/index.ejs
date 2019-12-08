@@ -1,25 +1,25 @@
 <%-include('../partials/header') %>
 
-<div class="todo-card content">
+<div class="ts-card content">
   <div class="card horizontal t-card">
     <div class="card-content t-content">
 
-      <div class="row today-content">
-        <div class="col s3 today-btns">
+      <div class="row ts-content">
+        <div class="col s3 ts-btns">
           <div class="row">
-            <a href="/today" class="todo-btn waves-effect waves-light btn">TODAY</a>
+            <a href="/today" class="ts-btn waves-effect waves-light btn">TODAY</a>
           </div>
           <div class="row">
-            <a href="/week" class="todo-btn waves-effect waves-light btn">WEEK</a>
+            <a href="/week" class="ts-btn waves-effect waves-light btn">WEEK</a>
           </div>
           <div class="row">
-            <a href="/year" class="todo-btn waves-effect waves-light btn">YEAR</a>
+            <a href="/year" class="ts-btn waves-effect waves-light btn">YEAR</a>
           </div>
         </div>
         <div class="t-divider"></div>
 
-        <div class="col s9 today-list">
-          <div class="today-list-content">
+        <div class="col s9 ts-list">
+          <div class="ts-list-content">
             <ul>
               <% user.today.forEach(function(ttodo) { %>
               <li>
@@ -27,10 +27,10 @@
                   <form action="/today/<%= ttodo._id %>?_method=DELETE" class="delete-form" class="btn-done"
                     method="POST">
                     <input type="checkbox" class="filled-in">
-                    <span class="today-text">
+                    <span class="ts-text">
                       <%= ttodo.content %>
-                      <button type="submit" class="btn-floating btn-tiny waves-effect waves-light today-delete">
-                        <i class="material-icons today-delete-icon valign-wrapper">close</i>
+                      <button type="submit" class="btn-floating btn-tiny waves-effect waves-light ts-delete">
+                        <i class="material-icons ts-delete-icon valign-wrapper">close</i>
                       </button>
                     </span>
 
@@ -41,7 +41,7 @@
               <% }); %>
             </ul>
           </div>
-          <div class="today-add">
+          <div>
             <form action="/today" class="input-add" method="POST" autocomplete="off">
               <input placeholder="Add new task" type="text" name="content">
               <button class="btn waves-effect waves-light" type="submit" name="action"> Add Task

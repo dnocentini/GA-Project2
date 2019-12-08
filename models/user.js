@@ -38,7 +38,9 @@ const userSchema = new Schema({
   today: [todoSchema],
   week: [todoSchema],
   year: [todoSchema],
-  shops: [shopSchema],
+  heb: [shopSchema],
+  walmart: [shopSchema],
+  costco: [shopSchema],
 }, {
   timestamps: true
 });

@@ -19,7 +19,9 @@ var usersRouter = require('./routes/users');
 var todayRouter = require('./routes/today');
 var weekRouter = require('./routes/week');
 var yearRouter = require('./routes/year');
-var shopsRouter = require('./routes/shops');
+var hebRouter = require('./routes/heb');
+var walmartRouter = require('./routes/walmart');
+var costcoRouter = require('./routes/costco');
 
 
 // view engine setup
@@ -45,7 +47,9 @@ app.use('/', usersRouter);
 app.use('/today', todayRouter);
 app.use('/week', weekRouter);
 app.use('/year', yearRouter);
-app.use('/shops', shopsRouter);
+app.use('/heb', hebRouter);
+app.use('/walmart', walmartRouter);
+app.use('/costco', costcoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

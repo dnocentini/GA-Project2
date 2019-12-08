@@ -1,45 +1,3 @@
-/* body {
-  display: grid;
-  grid-template-columns: 1fr, 2fr, 3fr, 2fr, 1fr;
-  grid-template-rows: 2fr, 3fr, 4fr, 4fr, 4fr, 1fr, 3fr, 1fr;
-}
-
-.brand-logo {
-  grid-column: 1/5;
-  grid-row: 1/2;
-  margin-left: 15px;
-}
-
-a {
-  color: #00B7FF;
-}
-
-.delete-form {
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.delete-form button {
-  color: red;
-}
-
-li {
-  list-style: none;
-}
-
-.selector-for-some-widget {
-  box-sizing: content-box;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-}
-
-.links > a{
-  margin-right: 10px;
-} */
-
 body {
   background-image: url("/images/background.jpg");
   background-size: cover;
@@ -151,18 +109,18 @@ main {
   height: 100%;
 }
 
-.today-content {
+.ts-content {
   height: 100%;
 }
 
-.today-btns {
+.ts-btns {
   height: 100%;
   display:flex;
   flex-direction:column;
   justify-content:space-around;
 }
 
-.todo-card {
+.ts-card {
   display: flex;
   justify-content: center;
   padding: 0px 30px 0px 30px;
@@ -177,7 +135,7 @@ main {
   justify-content:space-around;
 }
 
-.todo-btn {
+.ts-btn {
   width: 100px !important;
   height: 100px !important;
   line-height: 100px !important;
@@ -192,22 +150,22 @@ main {
   border-left:1px solid #2274A5
 }
 
-.today-list {
+.ts-list {
   height: 100% !important;
 }
 
-.today-list-content {
+.ts-list-content {
   min-height: 80% !important;
   max-height: 80% !important;
 }
 
-.today-delete {
+.ts-delete {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
 }
 
-.today-delete-icon {
+.ts-delete-icon {
   display: flex;
   justify-content: flex-end;
   height: inherit;
@@ -232,7 +190,7 @@ label {
   min-width: inherit;
 }
 
-.today-text {
+.ts-text {
   padding-left: 30px !important;
   display: inline !important;
 }
