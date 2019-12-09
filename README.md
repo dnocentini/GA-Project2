@@ -36,7 +36,9 @@ Listy is a simple app that makes it easier to plan, organize and manage tasks an
 
 ## Actual Wireframes
 
-![wireframes]
+![wireframes](public/images/awf1.png)
+![wireframes](public/images/awf2.png)
+![wireframes](public/images/awf3.png)
 
 ## Technologies Used
 
@@ -48,8 +50,8 @@ Listy is a simple app that makes it easier to plan, organize and manage tasks an
 
 ## Nice to haves
 
-1. edit to do list and shooping list
-2. 
-3. 
-4. calendar
-5. weather api
+1. Be able to edit a task/item on to do/shopping list.
+2. Be able to move tasks/item (up and down) on the same view.
+3. Have views with dates.
+4. Have a calendar
+5. Have a weather api
