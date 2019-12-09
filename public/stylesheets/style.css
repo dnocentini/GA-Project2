@@ -4,7 +4,7 @@ html {
 
 body {
   background-image: url("/images/background.jpg");
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(0.188rem);
   background-size: cover;
   min-height: 100%;
 }
@@ -26,7 +26,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-gap: 0px;
+  grid-gap: 0rem;
   grid-template-areas: 
     "header"
     "nav"
@@ -35,13 +35,13 @@ body {
 
 .nav-wrapper {
   background-color: #E83F6F;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
 }
 
 .brand-logo {
-  margin-left: 15px;
-  font-size: 40px !important;
+  margin-left: 1rem;
+  font-size: 2.5rem !important;
   font-family: 'Satisfy', cursive;
 }
 
@@ -53,18 +53,18 @@ body {
 .w-card {
   justify-content: center;
   width: auto;
-  padding: 20px 50px 20px 50px;
-  margin-top: 180px;
+  padding: 1.25rem 3.125rem;
+  margin: 10.25rem 1.875rem;
 }
 
 .w-title {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 52px !important;
+  font-size: 3.25rem !important;
 }
 
 .w-content {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 22px;
+  font-size: 1.5rem;
 }
 
 .nav-card {
@@ -74,21 +74,13 @@ body {
 
 .n-card {
   width: auto;
-  height: 30px;
-  margin: 0px 10px 0px 10px;
+  height: 1.875rem;
+  margin: 0rem 0.625rem;
 }
 
 .n-content {
   display: flex;
   justify-content: space-between;
-}
-
-.n-divider{
-  position:absolute;
-  left:50%;
-  top:10%;
-  bottom:10%;
-  border-left:1px solid black;
 }
 
 .t-content {
@@ -109,31 +101,23 @@ body {
 .ts-card {
   display: flex;
   justify-content: center;
-  padding: 0px 30px 0px 30px;
-}
-
-.t-card {
-  width: 550px;
-  height: 550px;
-  margin: 0px 10px 0px 10px;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-around;
+  padding: 0rem 2rem;
 }
 
 .ts-btn {
-  width: 100px !important;
-  height: 100px !important;
-  line-height: 100px !important;
+  width: 6.25rem !important;
+  height: 6.25rem !important;
+  line-height: 6.25rem !important;
   text-align: center;
+  padding: 0rem;
 }
 
 .t-divider{
   position:absolute;
-  left:26%;
-  top:5%;
-  bottom:5%;
-  border-left:1px solid #2274A5
+  left: 9rem;
+  top: 2rem;
+  bottom: 2rem;
+  border-left: .06rem solid #2274A5
 }
 
 .ts-list {
@@ -141,8 +125,8 @@ body {
 }
 
 .ts-list-content {
-  min-height: 80% !important;
-  max-height: 80% !important;
+  min-height: 26.5rem !important;
+  max-height: 26.5rem !important;
 }
 
 .ts-delete {
@@ -158,6 +142,15 @@ body {
   font-size: 1rem !important;
   color: #E83F6F !important;
   font-weight: bold !important;
+}
+
+.ts-title {
+  display: flex;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  justify-content: center;
+  color: grey;
 }
 
 ul {
@@ -177,31 +170,15 @@ label {
 }
 
 .ts-text {
-  padding-left: 30px !important;
+  padding-left: 1.875rem !important;
   display: inline !important;
+  color: grey;
 }
 
-tbody {
-  display:block;
-  height:150px;
-  overflow:auto;
-}
-thead, tbody tr {
-  display:table;
-  width:100%;
-  table-layout:fixed;
-}
-thead {
-  width: calc( 100% - 1em )
-}
-table {
-  width:100%;
-}
-
-@media (min-width: 500px) {
+@media (min-width: 32rem) {
   .wrapper {
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: .5fr .5fr 4fr;
+    grid-template-rows: .5fr .3fr 4fr;
     grid-template-areas: 
       "header  header  header"
       "nav     nav     nav"
@@ -209,21 +186,20 @@ table {
   }
 
   .t-card {
-    width: 90%;
-    height: 90%;
-    margin: 0px 10px 0px 10px;
+    width: 40rem;
+    height: 40rem;
+    margin: 0rem 0.625rem;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
   }
 
-
 }
 
-@media (min-width: 700px) {
+@media (min-width: 44rem) {
   .wrapper {
     grid-template-columns: 1fr 5fr 1fr;
-    grid-template-rows: .5fr .2fr 4fr;
+    grid-template-rows: .5fr .3fr 4fr;
     grid-template-areas: 
       "header  header  header"
       "nav     nav     nav"
@@ -231,9 +207,9 @@ table {
    }
 
    .t-card {
-    width: 40%;
-    height: 90%;
-    margin: 0px 10px 0px 10px;
+    width: 40rem;
+    height: 40rem;
+    margin: 0rem 0.625rem;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
