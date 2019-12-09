@@ -30,7 +30,9 @@ Listy is a simple app that makes it easier to plan, organize and manage tasks an
 
 ## Initial Wireframes
 
-![wireframes]
+![wireframes](public/images/wf1.jpg)
+![wireframes](public/images/wf2.jpg)
+![wireframes](public/images/wf3.jpg)
 
 ## Actual Wireframes
 
@@ -39,13 +41,14 @@ Listy is a simple app that makes it easier to plan, organize and manage tasks an
 ## Technologies Used
 
 - HTML, CSS, Javascript
-- Node, Express
+- Node.js, Express, Ejs
 - MongoDB, Mongoose
+- Materialize
 - Heroku
 
 ## Nice to haves
 
-1. 
+1. edit to do list and shooping list
 2. 
 3. 
 4. calendar
